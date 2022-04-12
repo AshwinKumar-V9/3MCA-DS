@@ -1,5 +1,6 @@
 #include<stdio.h>
-#define SIZE 8
+#include<stdlib.h>
+#define SIZE 100
 
 int* SelectionSort(int arr[SIZE]);
 int* QuickSort(int arr[SIZE], int, int);
@@ -7,41 +8,92 @@ int* BubbleSort(int arr[SIZE]);
 
 int main()
 {
-    int arr[SIZE] = {12, 0 , 3, 2, 9, 15, 87, 7};
+    //int arr[SIZE] = {12, 0 , 3, 2, 9, 15, 87, 7};
     int i;
     int* output;
 
-    printf("\nInput array is:\n");
-    for(i=0; i<SIZE; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    int arr[SIZE];
+	for(i = 0;i < SIZE; i += 1) //100 iterations
+	{
+		arr[i] = rand() % 200 + 1; //random number between 1-200
+	}
+
+    //print arr
+	printf("The arr values are:");
+	for(i = 0;i < SIZE; i += 1)
+	{
+		if((i % 10) == 0)
+		{
+			printf("\n");
+		}
+		printf("%d\t", arr[i]);
+	}
+	printf("\n\n");
+
+    // printf("\nInput array is:\n");
+    // for(i=0; i<SIZE; i++)
+    // {
+    //     printf("%d ", arr[i]);
+    // }
+    // printf("\n");
 
     output = SelectionSort(arr);
     printf("\nArray after selection sorting is:\n");
-    for(i=0; i<SIZE; i++)
-    {
-        printf("%d ", output[i]);
-    }
-    printf("\n");
+    // for(i=0; i<SIZE; i++)
+    // {
+    //     printf("%d ", output[i]);
+    // }
+    // printf("\n");
+    //print arr
+	printf("The arr values are:");
+	for(i = 0;i < SIZE; i += 1)
+	{
+		if((i % 10) == 0)
+		{
+			printf("\n");
+		}
+		printf("%d\t", arr[i]);
+	}
+	printf("\n\n");
 
     output = QuickSort(arr, 0, SIZE-1);
     printf("\nTotal Count: 176");
     printf("\nArray after quick sorting is:\n");
-    for(i=0; i<SIZE; i++)
-    {
-        printf("%d ", output[i]);
-    }
-    printf("\n");
+    // for(i=0; i<SIZE; i++)
+    // {
+    //     printf("%d ", output[i]);
+    // }
+    // printf("\n");
+    //print arr
+	printf("The arr values are:");
+	for(i = 0;i < SIZE; i += 1)
+	{
+		if((i % 10) == 0)
+		{
+			printf("\n");
+		}
+		printf("%d\t", arr[i]);
+	}
+	printf("\n\n");
 
     output = BubbleSort(arr);
     printf("\nArray after bubble sorting is:\n");
-    for(i=0; i<SIZE; i++)
-    {
-        printf("%d ", output[i]);
-    }
-    printf("\n");
+    // for(i=0; i<SIZE; i++)
+    // {
+    //     printf("%d ", output[i]);
+    // }
+    // printf("\n");
+    //print arr
+	printf("The arr values are:");
+	for(i = 0;i < SIZE; i += 1)
+	{
+		if((i % 10) == 0)
+		{
+			printf("\n");
+		}
+		printf("%d\t", arr[i]);
+	}
+	printf("\n\n");
 
     return 0;
 }
