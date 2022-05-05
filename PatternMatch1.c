@@ -7,7 +7,7 @@ int Find(char [], char []);
 
 int main()
 {
-    char string[STR_SIZE]= "AABAACAADAABAABA";
+    char string[STR_SIZE]= "AABAACAADAABAADA";
     char pattern[PAT_SIZE] = "AABA";
 
     Find(string, pattern);

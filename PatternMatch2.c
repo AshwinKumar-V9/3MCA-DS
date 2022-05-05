@@ -61,7 +61,6 @@ int FindKMP(char string[STR_SIZE], char pattern[PAT_SIZE])
         j = LPS[j - 1];
     }
     printf("Total char comparisons: %d\n", count);
-    return 0;
 
     free(LPS);
     return 0;
